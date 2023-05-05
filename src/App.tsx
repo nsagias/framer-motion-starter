@@ -33,6 +33,18 @@ function App() {
         initial={{ scale: 0, rotate: 45 }}
         onClick={() => setRotateDiv(!rotateDiv)}
       ></motion.div>
+
+     {/* Overlapping Effect */}
+      <motion.div style={{marginTop: 10}}
+        animate={{ x: moveDiv ? 200 : -200 }} 
+        transition={{ type: "spring", bounce: 0.7}}
+        onClick={() => setMoveDiv(!moveDiv)}
+      ></motion.div>
+
+      <motion.div style={{marginTop: 10}}
+        animate={{ rotate: [0, 200, 200, 0]}}
+        transition={{ duration: 1, repeat: 2}}
+      ></motion.div>
     </div>
   );
 }
