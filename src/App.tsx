@@ -13,10 +13,17 @@ function App() {
         initial={{ scale: 0}}
       ></motion.div>
 
-      {/* Move Div Horizontally On Click*/}
+      {/* Move Div Horizontally On Clic */}
       <motion.div 
-        animate={{ y: -50, scale: 1, x: moveDiv ? 200 : -200 }} 
-        initial={{ scale: 0}}
+        animate={{ x: moveDiv ? 200 : -200 }} 
+     
+        transition={{ type: "tween", duration: 1}}
+        onClick={() => setMoveDiv(!moveDiv)}
+      ></motion.div>
+
+      <motion.div style={{marginTop: 10}}
+        animate={{ x: moveDiv ? 200 : -200 }} 
+        transition={{ type: "spring", bounce: 0.7}}
         onClick={() => setMoveDiv(!moveDiv)}
       ></motion.div>
 
