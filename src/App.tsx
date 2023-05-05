@@ -7,7 +7,11 @@ function App() {
   return (
     <div className="framer-container">
       <motion.div animate={{ y: -100, scale: 1 }} initial={{ scale: 0}}></motion.div>
-      <motion.div animate={{ y: 100, scale: 1 }} initial={{ scale: 0}}></motion.div>
+      <motion.div 
+        animate={{ y: 100, scale: 1, rotate: rotateDiv ? 360 : 0 }} 
+        initial={{ scale: 0}}
+        onClick={() => setRotateDiv(!rotateDiv)}
+      ></motion.div>
     </div>
   );
 }
