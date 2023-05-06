@@ -3,3 +3,10 @@ export interface AnimatedCardProps {
   hueA: number;
   hueB: number;
 }
+
+
+export type FruitItem = {
+  emoji: string,
+  hueA: number,
+  hueB: number,
+}
