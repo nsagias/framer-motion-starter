@@ -1,4 +1,5 @@
-import { motion, Variants } from "framer-motion";
+import { Variants } from "framer-motion";
+import { FruitItem } from "../../types/AnimatedCard";
 
 export const cardVariants: Variants = {
   offscreen: {
@@ -14,8 +15,6 @@ export const cardVariants: Variants = {
     }
   }
 };
-
-
 
 
 export const fruitList: FruitItem[] = [
