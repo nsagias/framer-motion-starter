@@ -41,9 +41,20 @@ function App() {
         onClick={() => setMoveDiv(!moveDiv)}
       ></motion.div>
 
+      {/* Animation sequence */}
       <motion.div style={{marginTop: 10}}
         animate={{ rotate: [0, 200, 200, 0]}}
         transition={{ duration: 1, repeat: 2}}
+      ></motion.div>
+
+      {/* While Hover */}
+      <motion.div style={{marginTop: 10}}
+       whileHover={{ scale: 1.2}}
+      ></motion.div>
+
+      {/* Press and hold adjust scale */}
+      <motion.div style={{marginTop: 10}}
+       whileTap={{ scale: 0.8}}
       ></motion.div>
     </div>
   );
