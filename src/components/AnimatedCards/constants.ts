@@ -15,13 +15,16 @@ export const cardVariants: Variants = {
   }
 };
 
-export const food: [string, number, number][] = [
-  ["🍅", 340, 10],
-  ["🍊", 20, 40],
-  ["🍋", 60, 90],
-  ["🍐", 80, 120],
-  ["🍏", 100, 140],
-  ["🫐", 205, 245],
-  ["🍆", 260, 290],
-  ["🍇", 290, 320]
+
+
+
+export const fruitList: FruitItem[] = [
+  { emoji: "🍅" ,hueA: 340,hueB: 10 },
+  { emoji: "🍊" ,hueA: 20, hueB: 40 },
+  { emoji: "🍋" ,hueA: 60, hueB: 90 },
+  { emoji: "🍐" ,hueA: 80, hueB: 120 },
+  { emoji: "🍏" ,hueA: 100, hueB: 140 },
+  { emoji: "🫐" ,hueA: 205, hueB: 245 },
+  { emoji: "🍆" ,hueA: 260, hueB: 290 },
+  { emoji: "🍇" ,hueA: 290, hueB: 320 }
 ];
