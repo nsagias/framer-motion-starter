@@ -1,6 +1,6 @@
-import "./AnimatedModel.css";
+import "./AnimatedModal.css";
 
-export default function AnimatedModel() {
+export default function AnimatedModal() {
   return (
     <div className="">
       <h1>Animated model</h1>
