@@ -7,6 +7,7 @@ export const dropIn: Variants = {
   },
   visible: {
     y: "0",
+    opacity: 1,
     transition: {
       duration: 0.1,
       type: "spring",
