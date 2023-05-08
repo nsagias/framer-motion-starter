@@ -3,18 +3,18 @@ import AnimatedButton from './components/AnimatedButton/AnimatedButton';
 import AnimatedModel from './components/AnimatedModal/AnimatedModal';
 
 export default function App() {
-  const [modelOpen, setModalOpen] = useState<boolean>(false);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
 
   const close: () => void = () => setModalOpen(false);
   const open: () => void = () => setModalOpen(true);
   return (
     <>
       <AnimatedButton 
-        onModalOpen={modelOpen}
+        onModalOpen={modalOpen}
         onOpen={open}
         onClose={close}
       />
-      <AnimatedModel />
+      {modalOpen && ( <AnimatedModel modalOpen={modalOpen} handleClose={close}/> ) }
     </>
   );
 }
