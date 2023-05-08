@@ -1,39 +1,24 @@
 import { motion } from "framer-motion";
 
-export default function AnimatedButton() {
+type AnimatedButtonProps = {
+  onModalOpen: boolean,
+  onOpen: () => void,
+  onClose: () => void,
+};
+
+export default function AnimatedButton({ onModalOpen, onOpen, onClose }: AnimatedButtonProps ) {
   return (
     <>
       <div>
         <motion.button 
           className="save-button"
-          whileHover={{ scale: 1.1 }}
-          onClick={() => null}
-        >
-          Animated Button Hover
-        </motion.button>
-      </div>
-
-      <div>
-        <motion.button 
-          className="save-button"
-          whileTap={{ scale: 0.9 }}
-          onClick={() => null}
-        >
-          Animated Button Tap
-        </motion.button>
-      </div>
-
-      <div>
-        <motion.button 
-          className="save-button"
           whileTap={{ scale: 0.9 }}
           whileHover={{ scale: 1.1 }}
-          onClick={() => null}
+          onClick={() => ( onModalOpen ? onClose() : onOpen() )}
         >
-          Animated Button Hover and Tap
+          Show Modal
         </motion.button>
       </div>
     </>
-  
   );
 }
