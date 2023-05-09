@@ -19,6 +19,7 @@ export default function App() {
         initial={false}
         // exitBeforeEnter
         mode={"wait"}
+        onExitComplete={() => null}
       >
         {modalOpen && ( <AnimatedModel modalOpen={modalOpen} handleClose={close}/> ) }
       </AnimatePresence>
