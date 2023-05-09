@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import AnimatedButton from './components/AnimatedButton/AnimatedButton';
 import AnimatedModel from './components/AnimatedModal/AnimatedModal';
+import { AnimatePresence } from "framer-motion";
 
 export default function App() {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
@@ -14,7 +15,13 @@ export default function App() {
         onOpen={open}
         onClose={close}
       />
-      {modalOpen && ( <AnimatedModel modalOpen={modalOpen} handleClose={close}/> ) }
+      <AnimatePresence
+        initial={false}
+        // exitBeforeEnter
+        mode={"wait"}
+      >
+        {modalOpen && ( <AnimatedModel modalOpen={modalOpen} handleClose={close}/> ) }
+      </AnimatePresence>
     </>
   );
 }
