@@ -9,6 +9,7 @@ export default function AnimatedModal({ handleClose, text }: any) {
     <div className="">
       <AnimatedBackdrop onClick={handleClose}>
         <motion.div
+          drag
           onClick={(e) => e.stopPropagation()}
           className="modal orange-gradient"
           variants={dropIn}
